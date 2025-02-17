@@ -69,7 +69,7 @@ function App() {
       <button className="decrement-btn" onClick={handleDecrement}>Decrement</button>
       <button className="reset-btn" onClick={handleReset}>Reset</button>
 
-      <h2>Basic Calculator</h2>
+      <h2>Calculator</h2>
       <div className="inputs">
         {inputs.map((input, index) => (
           <input
