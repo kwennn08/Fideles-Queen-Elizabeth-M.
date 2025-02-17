@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #c3e8f9, #f9e6e6); 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 16px;
+  backdrop-filter: blur(12px); 
+  padding: 40px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.15); 
+  position: relative;
+  overflow: hidden;
+}
+
+
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 140%;
+  height: 140%;
+  background: linear-gradient(145deg, #d2a6ff, #6a82fb);
+  filter: blur(40px);
+  z-index: -1;
+}
+
+
+.counter-section, .calculator-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+
+.counter-title, .calc-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.result {
+  font-size: 1.5rem;
+  color: #444;
+  margin-top: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+button {
+  background: linear-gradient(135deg, #6aa4fb, #5c9d5c); 
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.3rem;
+  padding: 18px 36px;
+  margin: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+
+.increment-btn {
+  background: linear-gradient(135deg, #6aa4fb, #ff5757);
+}
+
+.decrement-btn {
+  background: linear-gradient(135deg, #ff5757, #f3e47d);
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #f3e47d, #f3f18c);
+  color: #444;
+}
+
+.add-btn, .subtract-btn, .multiply-btn, .divide-btn {
+  background: linear-gradient(135deg, #ff7a66, #6a82fb);
+}
+
+
+.calc-input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calc-input:focus {
+  border-color: #6a82fb;
+  outline: none;
+  box-shadow: 0 0 10px rgba(106, 130, 251, 0.4);
+}
+
+
+.inputs {
+  margin-bottom: 20px;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+.add-input-btn {
+  background: linear-gradient(135deg, #ff7a66, #6a82fb);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px 15px;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 12px 28px;
+  }
+
+  .calc-input {
+    font-size: 1rem;
+  }
+}
