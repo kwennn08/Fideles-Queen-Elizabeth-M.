@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div>
-      <h1>The number: {count}</h1>
+      <h1>Count: {count}</h1>
       <button className="increment-btn" onClick={handleIncrement}>Increment</button>
       <button className="decrement-btn" onClick={handleDecrement}>Decrement</button>
       <button className="reset-btn" onClick={handleReset}>Reset</button>
